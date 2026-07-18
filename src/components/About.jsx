@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[0.8fr_1.2fr] gap-16 md:gap-20 items-center">
         <div className="aspect-[3/4] rounded-sm overflow-hidden">
           <img
-            src="/paintings/portrait.JPG"
+            src={`${import.meta.env.BASE_URL}paintings/portrait.JPG`}
             alt="Portrait of the painter in her studio"
             className="w-full h-full object-cover"
           />
