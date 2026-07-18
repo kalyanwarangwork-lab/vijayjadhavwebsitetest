@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a3f34"/><stop offset="33%" stop-color="#2a2521"/><stop offset="67%" stop-color="#7a6a55"/><stop offset="100%" stop-color="#c9bfa5"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="9" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.9 0 0 0 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="texture">
+      <feTurbulence type="turbulence" baseFrequency="0.008 0.02" numOctaves="3" seed="10" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="30"/>
+    </filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <g filter="url(#texture)">
+    <ellipse cx="627" cy="382" rx="296" ry="85" fill="#4a3f34" opacity="0.22" transform="rotate(-17 627 382)" filter="url(#soft)"/><ellipse cx="474" cy="919" rx="469" ry="70" fill="#4a3f34" opacity="0.3" transform="rotate(2 474 919)" filter="url(#soft)"/><ellipse cx="173" cy="720" rx="391" ry="158" fill="#2a2521" opacity="0.2" transform="rotate(-20 173 720)" filter="url(#soft)"/><ellipse cx="113" cy="135" rx="419" ry="66" fill="#4a3f34" opacity="0.33" transform="rotate(9 113 135)" filter="url(#soft)"/><ellipse cx="209" cy="690" rx="274" ry="157" fill="#7a6a55" opacity="0.33" transform="rotate(-29 209 690)" filter="url(#soft)"/><ellipse cx="406" cy="287" rx="334" ry="61" fill="#4a3f34" opacity="0.33" transform="rotate(-15 406 287)" filter="url(#soft)"/><ellipse cx="56" cy="917" rx="353" ry="175" fill="#4a3f34" opacity="0.2" transform="rotate(-23 56 917)" filter="url(#soft)"/>
+  </g>
+  <rect width="800" height="1000" fill="#000" opacity="0.10" filter="url(#grain)"/>
+</svg>
