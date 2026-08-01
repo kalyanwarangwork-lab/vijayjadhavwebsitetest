@@ -24,7 +24,7 @@ export default function Hero() {
 
         <div className="relative aspect-[4/5] rounded-sm shadow-[0_30px_60px_-20px_rgba(30,20,10,0.35)] overflow-hidden">
           <img
-            src={`${import.meta.env.BASE_URL}paintings/hero.svg`}
+            src={`${import.meta.env.BASE_URL}paintings/hero.png`}
             alt="Featured painting, abstract landscape in deep teal and sienna tones"
             className="w-full h-full object-cover block animate-brush-reveal"
           />
